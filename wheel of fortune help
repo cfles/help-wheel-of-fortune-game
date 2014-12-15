@@ -1,0 +1,135 @@
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class WheelOfFortune {
+
+	/**
+	 * 
+	 */
+	public static void main(String[] args) {
+		//var needed for guess and check
+		String phrase = "grass is greener on other side";
+		String guess = " ";
+		int spin;
+		int score;
+		String[] letters = {"A B C D E F G H I J K L M N " +
+				"O P Q R S T U V W X Y Z "};
+		String letters;	// remove choosen
+		boolean[] usedLetters;	// mark arry of used
+		boolean notDone = true;	
+		
+		
+		/*
+		//players
+		Player player1 = new Player( "Player1" );
+		Player player2 = new Player( "Player2");
+		Player player3 = new Player( "Player3");
+		*/
+		Scanner input = new Scanner (System.in);
+		
+		// show players with what landed on and prompt for letter selection
+				System.out.printf( "Player 1 you landed on %d" +
+						"\n select your letter from the available letters from above:_");
+				spin = input.nextInt();
+				if ( int == 1)	{
+					System.out.print(" ");
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					// create random instance
+					Random spinNumber = new Random();
+					
+					//create our array to keep track of frequinceis
+					int [] freqArray = new int[10];
+					
+			// decalre variables 
+					int diceRoll;
+					int ranSpin;
+					
+					// roll dice 10 time - create for loop for 10 iterations
+					for( int spin = 1; spin <= 10; spin++){
+						// create our random number 1-6
+						ranSpin = 1 + spinNumber.nextInt(10);
+						
+						if ( ranSpin == 1){
+							System.outprintf("you landed on $100.");
+						}
+						else if ( ranSpin == 2){
+							System.outprintf("you landed on $300.");
+						}
+						else if ( ranSpin == 3){
+							System.outprintf("you landed on $500.");
+						}
+						else if ( ranSpin == 4){
+							System.outprintf("you landed on $700.");
+						}
+						else if ( ranSpin == 5){
+							System.outprintf("you landed on $900.");
+						}
+						else if ( ranSpin == 6){
+							System.outprintf("you landed on $2000.");
+						}
+						else if ( ranSpin == 7){
+							System.outprintf("you landed on $3000.");
+						}
+						else if ( ranSpin == 8){
+							System.outprintf("you landed on $5000.");
+						}
+						else if ( ranSpin == 9){
+							System.outprintf("you landed on -$1000.");
+						}
+						else if ( ranSpin == 10){
+							System.outprintf("you landed on $0.");
+						}
+						}  //  end first way 
+						
+					}  //  end for
+					// display results
+					for ( int index = 0; index < freqArray.length; index++){
+						System.out.printf("%d%8d\n", index +1, freqArray[index] );
+					}
+					
+					
+					
+					
+					
+					
+					
+					// create random instance
+					Random randomNumber= new Random();
+					
+					ranSpin = 1 +randomNumber.nextInt( 10 );
+					
+					
+
+							
+		
+				
+		while (notDone)	{
+			notDone = false;
+			for (char letter : phrase.toCharArray())	{
+				if ( guess.indexOf(letter) == -1)	{
+					System.out.print('_');
+				notDone = true;
+			}	// end for
+			else	{
+				System.out.print(letter);
+			}
+		}	// end while
+		// guess from 3 users
+		System.out.print("\nPlayer 1 - would you like to spin (1) or Guess (2) the puzzle?:   ");
+		String letter = input.next();
+		guess += letter;
+		letters = letters[nextInt(letters.length)];
+	
+		}
+	}	
+	}	// end main
+}	// end class
